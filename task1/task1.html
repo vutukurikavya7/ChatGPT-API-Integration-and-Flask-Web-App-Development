@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>
+		Build a Survey
+	</title>
+
+	<style>
+
+
+		body {
+			background-color: gray;
+			font-family: Verdana;
+			text-align: center;
+		}
+
+		/* Styling the Form (Color, Padding, Shadow) */
+		form {
+			background-color: #fff;
+			max-width: 500px;
+			margin: 50px auto;
+			padding: 30px 20px;
+			box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		/* Styling form-control Class */
+		.form-control {
+			text-align: left;
+			margin-bottom: 25px;
+		}
+
+		/* Styling form-control Label */
+		.form-control label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		/* Styling form-control input,
+		select, textarea */
+		.form-control input,
+		.form-control select,
+		.form-control textarea {
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			padding: 10px;
+			display: block;
+			width: 95%;
+		}
+
+		/* Styling form-control Radio
+		button and Checkbox */
+		.form-control input[type="radio"],
+		.form-control input[type="checkbox"] {
+			display: inline-block;
+			width: auto;
+		}
+
+		/* Styling Button */
+		button {
+			background-color: pink;
+			border: 1px solid #777;
+			border-radius: 2px;
+			font-family: inherit;
+			font-size: 25px;
+			display: block;
+			width: 100%;
+			margin-top: 50px;
+			margin-bottom: 20px;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>Task-1 Survey Form</h1>
+
+	
+    <form id="form" method="POST" action="thankyou.html"> 
+
+		<div class="form-control">
+			<label for="name" id="label-name">
+				1.Name
+			</label>
+
+			<input type="text"
+				id="name"
+				placeholder="Enter your name" />
+		</div>
+
+		<div class="form-control">
+			<label for="Location , City " id="label-Location , City ">
+				2.Location , City 
+			</label>
+
+			<!-- Input Type Email-->
+			<input type="Location , City "
+				id="Location , City "
+				placeholder="Enter your Location , City " />
+		</div>
+
+
+		<div class="form-control">
+			<label for="role" id="label-role">
+				3.Which class do you study ?
+			</label>
+		
+			<select name="role" id="role">
+				<option value="Primary | High school">Primary | High School</option>
+				<option value="Intermediate">
+					Intermediate
+				</option>
+				<option value="graduation">graduation</option>
+                <option value="Post Graduation">Post Graduation</option>
+			</select>
+		</div>
+                                      
+            <div class="form-control">
+			<label for="what is your prefred amount for online classes " id="label-Which Price range for Online Tution for LKG to PG Monthly Fees You like must">
+				4.Which Price range for Online Tution for LKG to PG Monthly Fees You like must
+			</label>
+
+			<!-- Input Type Text -->
+			<input type="text"
+				id="Which Price range for Online Tution for LKG to PG Monthly Fees You like must"
+				placeholder="Which Price range for Online Tution for LKG to PG Monthly Fees You like must" />
+		</div>
+            <div class="form-control">
+			<label for=" Laptop and Mobile which Price range you like most" id="label- Laptop and Mobile which Price range you like most">
+				5. Laptop and Mobile which Price range you like most
+			</label>
+
+			
+			<input type="text"
+				id=" Laptop and Mobile which Price range you like most"
+				placeholder=" Laptop and Mobile which Price range you like most" />
+		</div>
+                                      <div class="form-control">
+			<label for="role" id="label-role">
+				6.What is your Favourite food ?
+			</label>
+			
+		
+			<select name="role" id="role">
+				<option value="Veg Biryani">Veg Biryani</option>
+				<option value="Pongal">
+					Pongal
+				</option>
+				<option value="Veg Fried Rice">Veg Fried Rice</option>
+			</select>
+		</div>
+                                       <div class="form-control">
+			<label for="role" id="label-role">
+				7.What is Price of your Favourite food which  you like most 
+			</label>
+			<select name="role" id="role">
+                                                                             <option value="RS 99">RS 99</option>
+				<option value="RS 149">RS 149</option>
+				<option value="RS 249">
+					RS 249
+				</option>
+				<option value="RS 149 | RS 249 ">RS 149 | RS 249 </option>
+			</select>
+		</div>
+                                      <div class="form-control">
+            <label>
+                8. Which Financial products you like most
+            </label>
+ 
+            <!-- Input Type Radio Button -->
+            <label for="recommed-1">
+                <input type="checkbox"
+                       name="recommed">Mutual Fund SIP (ROI 12%)-1yr
+                    </input>
+            </label>
+            <label for="recommed-2">
+                <input type="checkbox"
+                       name="recommed">Company Stock IPO(ROI 15%)-1yr
+                    </input>
+            </label>
+            <label for="recommed-3">
+                <input type="checkbox"
+                       name="recommed">Yoshops Franchise Investment(ROI 16%)-1yr
+                    </input>
+            </label>
+            <label for="recommed-3">
+                <input type="checkbox"
+                       name="recommed">Bank FD(Rate of Interest- 7%)-1yr
+                    </input>
+            </label>
+        </div>
+
+                      <div class="form-control">
+            <label>
+                9.Are you interested in Yoshops Finance Product.
+            </label>
+ 
+            <!-- Input Type Radio Button -->
+            <label for="recommed-1">
+                <input type="radio"
+                       id="recommed-1"
+                       name="recommed">Yes</input>
+            </label>
+            <label for="recommed-2">
+                <input type="radio"
+                       id="recommed-2"
+                       name="recommed">No</input>
+            </label>
+            <label for="recommed-3">
+                <input type="radio"
+                       id="recommed-3"
+                       name="recommed">Maybe</input>
+            </label>
+        </div>
+        <div class="form-control">
+            <label for="internship name" id="label-internship">
+                10. Which Unpaid Training Internship are you interested for six Months ?
+            </label>
+            <input type="text"
+                   id="internship" />
+        </div>
+        <div class="form-control">
+            <label>
+                11. How much you pay training fees per month for online training with internship?
+            </label>
+ 
+            <!-- Input Type Radio Button -->
+            <label for="500">
+                <input type="radio"
+                       id="500"
+                       name="500">500</input>
+            </label>
+            <label for="1000">
+                <input type="radio"
+                       id="1000"
+                       name="1000">1000</input>
+            </label>
+            <label for="1500">
+                <input type="radio"
+                       id="1500"
+                       name="1500">1500</input>
+            </label>
+            <label for="4400">
+                <input type="radio"
+                       id="4400"
+                       name="4400">4400</input>
+            </label>
+        </div>
+        <div class="form-control">
+            <label for="experience" id="label-experience">
+                12. Your experience with Yoshops
+            </label>
+            <input type="text"
+                   id="experience" />
+        </div>
+        <div class="form-control">
+            <label for="suggesion" id="label-suggesion">
+                13. Any Suggestions for Yoshops Startup
+            </label>
+            <input type="text"
+                   id="suggestion" />
+        </div>
+
+        <div class="form-control">
+            <label>
+                
+                14. How would you rate Yoshops Training Internship and Products & Service
+            </label>
+            <select name="Rating" id="Rating">
+                <option value="1">1*</option>
+                <option value="2">2**</option>
+                <option value="3">3***</option>
+                <option value="4">4****</option>
+                <option value="5">5*****</option>
+                </select>
+        </div>
+  
+        
+        <button type="input" value="submit">
+            Submit
+        </button>
+
+    </form>
+    
+</body>
+  
+</html>

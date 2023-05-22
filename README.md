@@ -1,1 +1,1 @@
-# ChatGPT-API-Integration-and-Flask-Web-App-Development
+#Yoshops Web Development Internship Tasks

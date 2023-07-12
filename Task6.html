@@ -1,0 +1,44 @@
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+
+def scrape_product_reviews(url):
+    # Send a GET request to the product page
+    response = requests.get(url)
+    
+    # Create BeautifulSoup object to parse the HTML content
+    soup = BeautifulSoup(response.content, 'html.parser')
+    
+    # Find the relevant elements on the page
+    product_name = soup.find('h1', class_='product-name').text.strip()
+    product_details = soup.find('div', class_='product-details').text.strip()
+    
+    reviews = []
+    review_elements = soup.find_all('div', class_='review')
+    for review in review_elements:
+        customer_name = review.find('span', class_='customer-name').text.strip()
+        customer_email = review.find('span', class_='customer-email').text.strip()
+        review_text = review.find('p', class_='review-text').text.strip()
+        
+        reviews.append({
+            'Product Name': product_name,
+            'Product Details': product_details,
+            'Review': review_text,
+            'Customer Name': customer_name,
+            'Customer Email': customer_email
+        })
+    
+    return reviews
+
+def create_excel_file(data):
+    df = pd.DataFrame(data)
+    df.to_excel('product_reviews.xlsx', index=False)
+
+# URL of the product page where customers write feedback
+url = 'https://www.yoshops.com/product-page-url'
+
+# Scrape the reviews from the product page
+reviews = scrape_product_reviews(url)
+
+# Create an Excel file with the extracted data
+create_excel_file(reviews)
